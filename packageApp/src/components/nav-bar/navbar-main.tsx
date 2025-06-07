@@ -1,7 +1,7 @@
 "use client";
 
 import React  from "react";
-import { CheckSquare, Calendar, MapPin } from "lucide-react";
+import {Search, BookmarkIcon, HomeIcon} from "lucide-react";
 import {navbarButton} from "@/types/interface";
 import { Sidebar } from "@/components/ui/sidebar";
 import NavbarHeader from "@/components/nav-bar/navbar-header";
@@ -14,9 +14,9 @@ import NavbarFooter from "@/components/nav-bar/navbar-footer";
 const NavbarMain = () => {
 
     const navbarButtons: navbarButton[] = [
-        { name: "Tasks", icon: <CheckSquare className="w-5 h-5" /> },
-        { name: "Calendar", icon: <Calendar className="w-5 h-5" /> },
-        { name: "Places", icon: <MapPin className="w-5 h-5" /> },
+        {name: "Home", icon: <HomeIcon className="w-5 h-5" />, link: "/"},
+        { name: "Search", icon: <Search className="w-5 h-5" />, link: "/search" },
+        { name: "Saves", icon: <BookmarkIcon className="w-5 h-5" />, link: "/saves" },
     ];
 
 

@@ -19,6 +19,7 @@ model User {
   sessions      Session[]
   createdAt     DateTime  @default(now())
   updatedAt     DateTime  @updatedAt
+  Package       Package[]
 
   @@map("users")
 }
@@ -60,4 +61,10 @@ model VerificationToken {
 
   @@unique([identifier, token])
   @@map("verificationtokens")
+}
+
+model Package {
+  id     String @id
+  user   User   @relation(fields: [userId], references: [id])
+  userId String
 }

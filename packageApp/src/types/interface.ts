@@ -18,4 +18,5 @@ export interface CreateUserData {
 export interface navbarButton {
     name: string;
     icon: ReactNode;
+    link: string;
 }
